@@ -17,10 +17,12 @@ public class ShowControllers : MonoBehaviour
             if (showController)
             {
                 hand.ShowController();
+                hand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
             }
             else
             {
                 hand.HideController();
+                hand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithoutController);
             }
         }
     }
