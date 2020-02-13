@@ -10,7 +10,7 @@ namespace Valve.VR.InteractionSystem
     //-----------------------------------------------------------------------------
     public class SnapTurn : MonoBehaviour
     {
-        public float snapAngle = 90.0f;
+        public float snapAngle = 30.0f;
 
         public bool showTurnAnimation = true;
 
