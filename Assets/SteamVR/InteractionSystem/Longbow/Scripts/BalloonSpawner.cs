@@ -101,7 +101,7 @@ namespace Valve.VR.InteractionSystem
 					stretchSound.Play();
 				}
 			}
-			balloon.GetComponentInChildren<Balloon>().SetColor( color );
+			// balloon.GetComponentInChildren<Balloon>().SetColor( color );
 			if ( spawnDirectionTransform != null )
 			{
 				balloon.GetComponentInChildren<Rigidbody>().AddForce( spawnDirectionTransform.forward * spawnForce );

@@ -9,6 +9,13 @@ public class simpleAttach : MonoBehaviour
 {
 
     private Interactable interactable;
+    private Animator doorAnimator;
+
+    private void Awake()
+    {
+        doorAnimator = GetComponent<Animator>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +25,12 @@ public class simpleAttach : MonoBehaviour
     private void OnHandHoverBegin(Hand hand)
     {
         hand.ShowGrabHint();
+        doorAnimator.SetBool("isOpen", true);
     }
     private void OnHandHoverEnd(Hand hand)
     {
         hand.HideGrabHint();
+        doorAnimator.SetBool("isOpen", false);
     }
     private void HandHoverUpdate(Hand hand)
     {
